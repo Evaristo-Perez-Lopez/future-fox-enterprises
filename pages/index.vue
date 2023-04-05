@@ -1,7 +1,10 @@
 <script lang="ts" setup></script>
 
 <template>
-  <h1>Hello dfsd fsdworld!</h1>
+  <main class="max-w-screen-lg">
+    <h1>Starting Project</h1>
+    <p>Search App</p>
+  </main>
 </template>
 
 <style scoped></style>
