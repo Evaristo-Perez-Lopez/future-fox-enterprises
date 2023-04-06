@@ -35,4 +35,10 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  runtimeConfig: {
+    userAccessToken: '',
+    phoneNumberId: '',
+    waVersion: '',
+    baseMessagingUrl: ''
+  }
 })
