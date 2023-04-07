@@ -20,6 +20,16 @@ function send() {
           Search results: <span class="font-bold">0</span>
         </h4>
       </article>
+      <article class="flex flex-col gap-4">
+        <CoreFormsSearchResult
+          name="Codely TV - aprender programacion"
+          description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, nisi reiciendis. Quasi voluptatum fuga aliquam in, quas inventore temporibus corporis assumenda, doloribus suscipit et maxime fugiat ratione necessitatibus incidunt voluptas."
+          url="/" />
+        <CoreFormsSearchResult
+          name="Sara store"
+          description="Ea, nisi reiciendis. Quasi voluptatum fuga aliquam in, quas inventore temporibus corporis assumenda, doloribus suscipit et maxime fugiat ratione necessitatibus incidunt voluptas."
+          url="/" />
+      </article>
     </section>
     <h1>Starting Project</h1>
     <p>Search App</p>
