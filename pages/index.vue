@@ -30,6 +30,9 @@ function send() {
           description="Ea, nisi reiciendis. Quasi voluptatum fuga aliquam in, quas inventore temporibus corporis assumenda, doloribus suscipit et maxime fugiat ratione necessitatibus incidunt voluptas."
           url="/" />
       </article>
+      <article class="flex justify-center my-8">
+        <CoreFormsNoResults />
+      </article>
     </section>
     <h1>Starting Project</h1>
     <p>Search App</p>
