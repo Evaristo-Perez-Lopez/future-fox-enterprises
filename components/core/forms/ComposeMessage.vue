@@ -26,9 +26,8 @@ function  validateAndSendMessage() {
   } else {
     errors.value = []
     formStatus.value = "complete"
+    message.value = ""
   }
-  console.log(data);
-  console.warn(error);
 }
 </script>
 <template>
