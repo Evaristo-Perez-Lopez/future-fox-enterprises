@@ -1,6 +1,7 @@
 <script lang="ts" setup>
+import type { Company } from "~/types/Company";
 const route = useRoute();
-const company = useCompany().value.filter(
+const company: any = useCompany().dataCompanies.value?.filter(
   (item) => item.id === route.params.id
 );
 
@@ -9,7 +10,7 @@ const write = ref(false);
 </script>
 <template>
   <section
-    v-if="company.length === 0 || !company"
+    v-if="company?.length === 0 || !company"
     class="mx-auto p-2 md:p-0 md:py-2 max-w-xl text-red-400 italic text-lg">
     There is no data to show here
   </section>
