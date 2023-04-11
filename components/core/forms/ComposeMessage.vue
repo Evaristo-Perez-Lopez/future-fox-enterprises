@@ -10,18 +10,29 @@ const props = defineProps({
 })
 const toNumber = computed(()=> props.company.code+""+ props.company.phone)
 const message = ref<string>("");
+const errors = ref<string[]>([]);
+const formStatus = ref<string>("")
 function  validateAndSendMessage() {
   if (message.value === "") {
     errors.value.push("The message field must have content")
     return
   }
+  formStatus.value = "sending"
   const { data, error } = useSendMessage().sender(toNumber.value, message.value)
+  if (error.value) {
+    formStatus.value = "error"
+    errors.value.push(error.value)
+    return
+  } else {
+    errors.value = []
+    formStatus.value = "complete"
+  }
   console.log(data);
   console.warn(error);
 }
-const errors = ref<string[]>([]);
 </script>
 <template>
+
   <form @submit.prevent="validateAndSendMessage">
     <textarea
       v-model="message"
@@ -35,9 +46,12 @@ const errors = ref<string[]>([]);
        <p v-for="(err, index) in errors" :key="index">{{ err }}</p>
        </p>
     <button
-      class="mt-2 border-2 px-2 py-1 bg-gray-800 hover:bg-gray-700 uppercase text-white rounded"
+      class="mt-2 border-2 px-2 py-1 bg-gray-800 hover:bg-gray-700 uppercase text-white rounded flex items-center"
       type="submit">
       Submit
+      <IconsLoader v-if="formStatus === 'loading'"  class="fill-sky-400 animate-spin ml-2" />
+      <IconsCheckCircle v-if="formStatus === 'complete'"  class="fill-green-400 ml-2" />
+      <IconsError v-if="formStatus === 'error'"  class="fill-red-400 ml-2" />
     </button>
   </form>
 </template>
