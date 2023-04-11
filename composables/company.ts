@@ -17,14 +17,14 @@ const Companies: Company[] = [
   {
     id: "c780e55b-ed98-4934-bf02-30970d11bede",
     name: "Mac'Ma",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem perferendis beatae asperiores accusamus, velit aut.e",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis facere hic eum pariatur nulla eaque ipsa odit? Id, ipsum adipisci corrupti labore omnis consequatur sapiente laboriosam cupiditate, atque, fugiat autem.",
     phone: 9841408103,
     code: 52
   },
   {
     id: "4e8059f8-8ec6-401d-b518-7abc1e38ba38",
     name: "Snacknation",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem perferendis beatae asperiores accusamus, velit aut.e",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis facere hic eum pariatur nulla eaque ipsa odit? Id, ipsum adipisci corrupti labore omnis consequatur sapiente laboriosam cupiditate, atque, fugiat autem.",
     phone: 9841408103,
     code: 52
   },

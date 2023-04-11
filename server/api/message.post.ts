@@ -15,14 +15,25 @@ export default defineEventHandler(async (event) => {
       "messaging_product": "whatsapp",
       "recipient_type": "individual",
       "to": to,
-      "type": "text",
-      "text": {
-        "preview_url": true,
-        "body": message
-      }
+      "type": "template",
+      "template": {
+        "name": "futuremsg",
+        "language": {
+          "code": "es_MX"
+        },
+        "components": [{
+          "type": "body",
+          "parameters": [{
+            "type": "text",
+            "text": message
+          }]
+        }]
+      },
     }
   })
-  if (result?.messages) {
+  console.log(result);
+
+  if (result) {
     return { code: 200, message: "Message sent" }
   }
 
