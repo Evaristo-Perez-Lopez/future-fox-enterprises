@@ -40,3 +40,8 @@ npm run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## DB
+For relational databases, use db push command to push the example schema to your own database
+```bash
+npx prisma db push
+```

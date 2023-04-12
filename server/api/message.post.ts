@@ -17,7 +17,7 @@ export default defineEventHandler(async (event) => {
       "to": to,
       "type": "template",
       "template": {
-        "name": "futuremsg",
+        "name": "start",
         "language": {
           "code": "es_MX"
         },
